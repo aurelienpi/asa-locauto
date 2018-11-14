@@ -564,6 +564,11 @@ ul li {
   margin-left: auto;
   margin-right: auto;
 }
+.calendrier {
+	width: 40%;
+  margin-left: 0;
+  margin-right: 100;
+}
 /* ------------------------------------------------------------------------------
 	Contact form
 -------------------------------------------------------------------------------*/
@@ -686,4 +691,6 @@ padding:15px 30px 15px 30px;
 	font-size: 11px;
 	margin: 0 2px;
 }
+
+
 
