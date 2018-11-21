@@ -74,15 +74,15 @@ color: red;
           <li><a href="#Menu1">Menu1</a></li>
           <li><a href="#Menu2">Menu2</a></li>
           <li><a href="#Menu3">Menu3</a></li>
-          <li><a href="http://localhost/aurelsite/www/services.php">Ajout Services</a></li>
-          <li><a href="http://localhost/aurelsite/www/achat.php">Achat</a></li>
-          <li><a href="#contact">Contact</a></li> 
+          <li><a href="http://localhost/aurelsite/www/services.php">Enquête</a></li>
+          <li><a href="http://localhost/aurelsite/www/achat.php">Contact</a></li>
+          <li><a href="#contact">Connexion</a></li> 
           
         </ul>
       </nav>
       <a href="#" class="nav-toggle">Menu<span></span></a> </div>
 
-<div id="header">
+<!-- <div id="header">
 	<h1></h1>
 	<ul>
 		<li><a href=</span></a></li>
@@ -91,7 +91,7 @@ color: red;
 		<li><a href=</span></a></li>
 		<li><a href=</span></a></li>
 	
-	</ul>
+	</ul> -->
 </div>
 <div class="colmask threecol">
 	<div class="colmid">
@@ -104,13 +104,27 @@ color: red;
 			<div class="col2">
 				<!-- Column 2 start -->
 				<script type="text/javascript">
+          var todaydate=new Date()
+          var curmonth=todaydate.getMonth()+1 //get current month (1-12)
+          var curyear=todaydate.getFullYear() //get current year
 
-var todaydate=new Date()
-var curmonth=todaydate.getMonth()+1 //get current month (1-12)
-var curyear=todaydate.getFullYear() //get current year
+          document.write(buildCal(curmonth ,curyear, "main", "month", "daysofweek", "days", 1));
+        </script>
+        <br>
+        <!-- widget meteo -->
+        <div id="widget_b8ddbd6289e7e621ca6aff39a300b297">
+        <span id="l_b8ddbd6289e7e621ca6aff39a300b297"><a href="http://www.mymeteo.info/r/paris_zf">Paris France</a></span>
+        <script type="text/javascript">
+        (function() {
+          var my = document.createElement("script"); my.type = "text/javascript"; my.async = true;
+          my.src = "https://services.my-meteo.com/widget/js_design?ville=251&format=petit-horizontal&nb_jours=1&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=3&fond=1&masque=3&x=252&y=80&d=0&id=b8ddbd6289e7e621ca6aff39a300b297";
+          var z = document.getElementsByTagName("script")[0]; z.parentNode.insertBefore(my, z);
+        })();
+        </script>
+        </div>
+        <!-- widget meteo -->
 
-document.write(buildCal(curmonth ,curyear, "main", "month", "daysofweek", "days", 1));
-</script>
+
 			</div>
 			<div class="col3">
 				<!-- Column 3 start -->
@@ -125,6 +139,20 @@ document.write(buildCal(curmonth ,curyear, "main", "month", "daysofweek", "days"
 		</div>
 	</div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <footer class="footer">
   <div class="footer-top section">
     <div class="container">
