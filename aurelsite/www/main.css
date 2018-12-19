@@ -1,3 +1,4 @@
+
 /* ------------------------------------------------------------------------------
 	Template Name: Minifolio
 	Author: Designstub
@@ -86,6 +87,7 @@ a:hover, a:focus {
 	transition: background-color, color, 0.3s;
 }
 body {
+	 
 	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: 400;
 	color: #6c7279;
@@ -131,9 +133,9 @@ ul li {
 }
 #header .logo {
 	float: left;
-	font-size:24px;
+	font-size:30px;
 	font-weight:700;
-	color:#fff;
+	color:gray;
 	text-decoration:none;
 	text-transform:uppercase;
 	letter-spacing:7px;
@@ -317,7 +319,7 @@ ul li {
 -------------------------------------------------------------------------------*/
 
 .banner {
-	background-image: url(../images/iris.jpg);
+	background-image: url(image/image-2.jpg);
 	background-position: center top;
 	background-repeat: no-repeat;
 	-moz-background-size: cover;

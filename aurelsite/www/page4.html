@@ -46,27 +46,27 @@ color: red;
 ***********************************************/
 
 </script> 
-	<title>ASA LOCAUTO</title>
-	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
-	<meta name="description" content="The Perfect 3 Column Liquid Layout: No CSS hacks. SEO friendly. iPhone compatible." />
-	<meta name="keywords" content="The Perfect 3 Column Liquid Layout: No CSS hacks. SEO friendly. iPhone compatible." />
-	<meta name="robots" content="index, follow" />
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" type="text/css" href="screen.css" media="screen" />
-	<link rel="stylesheet" href="bootstrap.min.css">
-<link rel="stylesheet" href="css/flexslider.css">
-<link rel="stylesheet" href="css/jquery.fancybox.css">
+  <title>ASA LOCAUTO</title>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+  <meta name="description" content="The Perfect 3 Column Liquid Layout: No CSS hacks. SEO friendly. iPhone compatible." />
+  <meta name="keywords" content="The Perfect 3 Column Liquid Layout: No CSS hacks. SEO friendly. iPhone compatible." />
+  <meta name="robots" content="index, follow" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="screen.css" media="screen" />
+  <link rel="stylesheet" href="./bootstrap.min.css">
+<link rel="stylesheet" href="./css/flexslider.css">
+<link rel="stylesheet" href="./css/jquery.fancybox.css">
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="responsive.css">
-<link rel="stylesheet" href="font-icon.css">
-<link rel="stylesheet" href="animate.min.css">
+<link rel="stylesheet" href="./main.css">
+<link rel="stylesheet" href="./responsive.css">
+<link rel="stylesheet" href="./font-icon.css">
+<link rel="stylesheet" href="./animate.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
-	<section class="banner" role="banner">
+  <section class="banner" role="banner">
   <header id="header">
     <div class="header-content clearfix"> <a class="logo" href="index.html">ASA-LOCAUTO</a>
       <nav class="navigation" role="navigation">
@@ -74,7 +74,7 @@ color: red;
           <li><a href="index.htm">Menu1</a></li>
           <li><a href="#Menu2">Menu2</a></li>
           <li><a href="#Menu3">Menu3</a></li>
-          <li><a href="page2.html">Enquête</a></li>
+          <li><a href="./enquete/page2.html">Enquête</a></li>
           <li><a href="http://localhost/aurelsite/www/achat.php">Contact</a></li>
           <li><a href="#contact">Connexion</a></li> 
           
@@ -83,29 +83,99 @@ color: red;
       <a href="#" class="nav-toggle">Menu<span></span></a> </div>
 
 <!-- <div id="header">
-	<h1></h1>
-	<ul>
-		<li><a href=</span></a></li>
-		<li><a href=</span></a></li>
-		<li><a href=</span></a></li>
-		<li><a href=</span></a></li>
-		<li><a href=</span></a></li>
-	
-	</ul> -->
+  <h1></h1>
+  <ul>
+    <li><a href=</span></a></li>
+    <li><a href=</span></a></li>
+    <li><a href=</span></a></li>
+    <li><a href=</span></a></li>
+    <li><a href=</span></a></li>
+  
+  </ul> -->
 </div>
 <div class="colmask threecol">
-	<div class="colmid">
-		<div class="colleft">
-			<div class="col1">
-				<!-- Column 1 start -->
-				
+  <div class="colmid">
+    <div class="colleft">
+      <div class="col1">
+        <!-- Column 1 start -->
+          <script>
+
+        function verif(){
+
+            var email=document.getElementById("email").value;
+            var cptad=0;
+            var cptpoint=0;
+
+            for (var i=0; i<email.length; i++)
+            {
+                if (email.charAt(i)=='@')
+                {
+                    cptad++;
+
+                }
+                else if (email.charAt(i)=='.')
+                {
+                    cptpoint++;
+                }
+            }
+            if(cptad==1 && cptpoint>=1){}
+            else
+            {
+                alert("email saisie invalide ");
+                return false;
+            }
+        }
+
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    
+
+    <form method="POST" onSubmit="return verif()" action="page5.html">
+      Quel modele achetez-vous le plus souvent ?<br>
+
+      <input type="radio" name="modele" value="tesla" id="tesla">
+      <label for="chaussures"> tesla </label><br>
+      <input type="radio" name="modele" value="bmw" id="bmw">
+      <label for="T-shirt/Pulls"> bmw </label><br>
+      <input type="radio" name="modele" value="audi" id="audi">
+      <label for="jean"> audi </label><br>
+     
+
+      Combien de fois avez vous achetez chez nous ?<br>
+      <input type="radio" name="frequence" value="0 fois" id="0 fois">
+      <label for="0 fois"> 0 </label><br>
+      <input type="radio" name="frequence" value="1 fois" id="1 fois">
+      <label for="1 fois"> 1 </label><br>
+      <input type="radio" name="frequence" value="2 fois" id="2 fois">
+      <label for="2 fois"> 2 </label><br>
+      <input type="radio" name="frequence" value="3 fois" id="3 fois">
+      <label for="3 fois"> 3 </label><br><br>
+
+      Qualité du SAV ?<br>
+      <input type="radio" name="qualite" value="très bien" id="très bien">
+      <label for="très bien"> Très bien </label><br>
+      <input type="radio" name="qualité" value="bien" id="bien">
+      <label for="bien"> Bien </label><br>
+      <input type="radio" name="qualite" value="passable" id="passable">
+      <label for="passable"> Passable </label><br>
+      <input type="radio" name="qualite" value="mauvais" id="mauvais">
+      <label for="mauvais"> Mauvais </label><br><br>
+
+      <input type="submit" value = "Suivant" style="background-color: #FFBF00; border: 1px solid black;padding:8px">
+    </form>
+  </div>
+  
+        
   </form>
   
-				<!-- Column 1 end -->
-			</div>
-			<div class="col2">
-				<!-- Column 2 start -->
-				<script type="text/javascript">
+        <!-- Column 1 end -->
+      </div>
+      <div class="col2">
+        <!-- Column 2 start -->
+        <script type="text/javascript">
           var todaydate=new Date()
           var curmonth=todaydate.getMonth()+1 //get current month (1-12)
           var curyear=todaydate.getFullYear() //get current year
@@ -127,19 +197,19 @@ color: red;
         <!-- widget meteo -->
 
 
-			</div>
-			<div class="col3">
-				<!-- Column 3 start -->
-				<div id="ads">
-					<a href="https://www.norauto.fr/">
-						<img src="norauto.jpg" width="125" border="0" height="125"  />
-					</a>
-				</div>
-				pubs news
-				<!-- Column 3 end -->
-			</div>
-		</div>
-	</div>
+      </div>
+      <div class="col3">
+        <!-- Column 3 start -->
+        <div id="ads">
+          <a href="https://www.norauto.fr/">
+            <img src="norauto.jpg" width="125" border="0" height="125"  />
+          </a>
+        </div>
+        pubs news
+        <!-- Column 3 end -->
+      </div>
+    </div>
+  </div>
 </div>
 
 
