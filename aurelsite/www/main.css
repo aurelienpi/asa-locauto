@@ -97,9 +97,9 @@ ul, ol {
 ul li {
 	list-style: none;
 }
-.section {
+/*.section {
 	padding: 100px 0;
-}
+}*/
 .no-padding {
 	padding: 0;
 }
@@ -107,9 +107,9 @@ ul li {
 	padding-right: 0;
 	padding-left: 0;
 }
-.space {
+/*.space {
 	margin-top: 60px;
-}
+}*/
 
 /* ------------------------------------------------------------------------------
 	Header
@@ -133,7 +133,7 @@ ul li {
 	float: left;
 	font-size:24px;
 	font-weight:700;
-	color:#fff;
+	color:#000;
 	text-decoration:none;
 	text-transform:uppercase;
 	letter-spacing:7px;

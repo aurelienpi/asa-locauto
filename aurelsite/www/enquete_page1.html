@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Page1_Enquête</title>
+<script Language = "javascript">
+	function verif()
+	{
+		var nom=document.getElementById("nom").value;
+		var prenom=document.getElementById("prenom").value;
+		var adr = document.getElementById("adr").value;
+		var ok =true;
+
+		if(nom.value == "")
+		{
+			alert("Champ nom vide");
+			identifiant.style.border = "1px solid #f00",
+		    identifiant.style.backgroundColor = "#fba";
+		    ok = false;
+		}
+		if(prenom.value == "")
+		{
+			alert("Champ prenom vide");
+			message.style.border = "1px solid #f00",
+		    message.style.backgroundColor = "#fba";
+		    ok = false;
+		}
+
+		
+		var cptad = 0;
+		var cptpoint = 0;
+		for(var i=0; i<adr.length; i++)
+		{
+			if(adr.charAt(i) == '@')
+			{
+				cptad ++;
+			}
+			else if(adr.charAt(i) == '.')
+			{
+				cptpoint ++;
+			}
+		}
+		if(cptad == 1 && cptpoint >= 1)
+		{
+			alert("Email est correct");
+		}
+		else
+			alert("Email service invalide !");
+	}
+</script>
+<body>
+<form method="GET"  onSubmit="return verif()">
+<p>Nom:</p><input type = "text" name="nom" id="nom"/>
+<p>Prenom:</p><input type = "text" id="prenom" name="prenom"/>
+<p>Adresse mail</p><input type = "text" id="adr" name="adr"/><br><br>
+
+<input type="submit" value = "Envoyer">
+</form>
+</body>
+</head>
+</html>
