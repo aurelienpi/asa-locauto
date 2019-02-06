@@ -1,0 +1,193 @@
+<html>
+<head>
+<meta http-equiv="content-Type" content="text/html; charset=iso-8859-1"> 
+<link rel="stylesheet" type="text/css" href="index.css" />
+<script type="text/javascript" src="basiccalendar.js">
+
+/***********************************************
+* Basic Calendar-By Brian Gosselin at http://scriptasylum.com/bgaudiodr/
+* Script featured on Dynamic Drive (http://www.dynamicdrive.com)
+* This notice must stay intact for use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script> 
+  <title>ASA LOCAUTO</title>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="screen.css" media="screen" />
+
+</head>
+<body>
+  <section class="banner" role="banner">
+  <header id="header">
+    <div class="header-content clearfix"> <a class="logo" href="index.html">ASA-LOCAUTO</a>
+      <nav class="navigation" role="navigation">
+        <ul class="primary-nav">
+          <li><a href="index.htm">Menu1</a></li>
+          <li><a href="#Menu2">Menu2</a></li>
+          <li><a href="#Menu3">Menu3</a></li>
+          <li><a href="./enquete/page2.html">Enquête</a></li>
+          <li><a href="http://localhost/aurelsite/www/achat.php">Contact</a></li>
+          <li><a href="#contact">Connexion</a></li> 
+          
+        </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+
+<!-- <div id="header">
+  <h1></h1>
+  <ul>
+    <li><a href=</span></a></li>
+    <li><a href=</span></a></li>
+    <li><a href=</span></a></li>
+    <li><a href=</span></a></li>
+    <li><a href=</span></a></li>
+  
+  </ul> -->
+</div>
+<div class="colmask threecol">
+  <div class="colmid">
+    <div class="colleft">
+      <div class="col1">
+        <!-- Column 1 start -->
+         <script>
+
+        function verif(){
+
+            var email=document.getElementById("email").value;
+            var cptad=0;
+            var cptpoint=0;
+
+            for (var i=0; i<email.length; i++)
+            {
+                if (email.charAt(i)=='@')
+                {
+                    cptad++;
+
+                }
+                else if (email.charAt(i)=='.')
+                {
+                    cptpoint++;
+                }
+            }
+            if(cptad==1 && cptpoint>=1){}
+            else
+            {
+                alert("email saisie invalide ");
+                return false;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    
+        <h2>Enquête de satisfaction</h2> <br>
+        <form method="POST" onSubmit="return verif()" action="page3.html">
+            nom: <input id="nom" required/> <br><br>
+            prenom: <input id="prenom" required/> <br><br>
+            email: <input id="email"required/> <br><br>
+            Date de naissance: <input type="date" id="date" name = "date" required>
+            <br><br>
+            <input type="submit" value = "Suivant" >
+        </form>
+        
+  </form>
+  
+        <!-- Column 1 end -->
+      </div>
+      <div class="col2">
+        <!-- Column 2 start -->
+        <script type="text/javascript">
+          var todaydate=new Date()
+          var curmonth=todaydate.getMonth()+1 //get current month (1-12)
+          var curyear=todaydate.getFullYear() //get current year
+
+          document.write(buildCal(curmonth ,curyear, "main", "month", "daysofweek", "days", 1));
+        </script>
+        <br>
+        <!-- widget meteo -->
+        <div id="widget_b8ddbd6289e7e621ca6aff39a300b297">
+        <span id="l_b8ddbd6289e7e621ca6aff39a300b297"><a href="http://www.mymeteo.info/r/paris_zf">Paris France</a></span>
+        <script type="text/javascript">
+        (function() {
+          var my = document.createElement("script"); my.type = "text/javascript"; my.async = true;
+          my.src = "https://services.my-meteo.com/widget/js_design?ville=251&format=petit-horizontal&nb_jours=1&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=3&fond=1&masque=3&x=252&y=80&d=0&id=b8ddbd6289e7e621ca6aff39a300b297";
+          var z = document.getElementsByTagName("script")[0]; z.parentNode.insertBefore(my, z);
+        })();
+        </script>
+        </div>
+        <!-- widget meteo -->
+
+
+      </div>
+      <div class="col3">
+        <!-- Column 3 start -->
+        <div id="ads">
+          <a href="https://www.norauto.fr/">
+            <img src="norauto.jpg" width="125" border="0" height="125"  />
+          </a>
+        </div>
+        pubs news
+        <!-- Column 3 end -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-top section">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col col-md-6">
+          <h5>Notre géolocalisation</h5>
+          <p>6-8 Impasse des 2 Cousins, 75017 Paris<br>
+            0646718273<br>
+           adheroes@hotmail.fr</p>
+          <p>Copyright © 2015 InfoTech Inc. All Rights Reserved. Created with <i class="fa fa-heart pulse"></i> by Aurelien Piccinin</a></p>
+        </div>
+        <div class="footer-col col-md-3">
+          <h5>Nos services</h5>
+          <p>
+          <ul>
+            <li><a href="#">Ventes & achats</a></li>
+            <li><a href="#">Nos services sécurités</a></li>
+            <li><a href="#">Nos services installation</a></li>
+            <li><a href="#">Support Analyse & Informations</a></li>
+            <li><a href="#">Gestion de services</a></li>
+          </ul>
+          </p>
+        </div>
+        <div class="footer-col col-md-3">
+          <h5>Partagez sur les réseaux sociaux</h5>
+          <ul class="footer-share">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer top --> 
+  
+</footer>
+
+</body>
+</html>

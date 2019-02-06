@@ -1,0 +1,32 @@
+
+body {margin: 0; padding: 0 } /* marges intérieures et extérieures */
+h4 { /* style des en-tête et en-pied */
+  font-size: 30px; /* taille de la police */
+  margin: 0; /* pas de marge : colle aux bords de l'écran */ 
+  background-color: #dda; /* couleur de fonds */
+  text-align:center ; /* le texte est centré */
+  border-top: 3px solid black; /* style de l'encadrement haut */ 
+  border-bottom: 3px solid black} /* style de l'encadrement bas */
+
+.container { /* boite qui entoure les 3 colonnes */
+  background-color: #E7E4E4 ; /* couleur de fond */
+  margin:0 ; padding:0} /* marges intérieures et extérieures à 0 */
+
+.gauche { /* boite gauche (avec le menu) */
+   position: absolute; /* positionné par rapport à la boite parent (ici .container) */
+   left: 10px; /* démarre à 10 pixels de la gauche de la boite parent */
+   width: 23%; /* largeur de la boite */
+   border:dashed 1px orange} /* encadrement discret de la boite */
+
+.centre { /* boite qui "pousse" vers le bas le reste de la page */
+   margin: 0 25% 0 25%; /* marges gauche et droite, pour la place des 2 autres colonnes */
+   border-left: 3px solid black; /* bordure gauche */
+   border-right: 3px solid black; /* bordure droite */
+  padding: 10px; /* marge intérieure - indispensable */
+  background-color: #CCCCCC} /* couleur du fond */
+
+.droite { /* boite droite (avec le commentaire) */
+  position: absolute; /* positionné par rapport à la boite parent (ici .container) */
+  right: 10px; /* démarre à 10 pixels de la droite de la boite parent */
+  width: 23%; ; /* largeur de la boite */
+  border:dashed 1px orange} /* encadrement discret de la boite */ 

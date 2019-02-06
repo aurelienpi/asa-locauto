@@ -1,0 +1,94 @@
+
+<html>
+ <head> 
+<meta http-equiv="content-Type" content="text/html; charset=iso-8859-1"> 
+<link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+
+<body>
+
+<h4>EN-TETE</h4>
+
+<div class="gauche">
+  <p>Colonne gauche</p>
+</div>
+
+<div class="droite"> <!-- Dans certains cas, mettre la colonne droite avant la centre passe mieux -->
+  <p>Colonne droite</p>
+</div>
+
+<div class="centre">
+          <script>
+
+        function verif(){
+
+            var email=document.getElementById("email").value;
+            var cptad=0;
+            var cptpoint=0;
+
+            for (var i=0; i<email.length; i++)
+            {
+                if (email.charAt(i)=='@')
+                {
+                    cptad++;
+
+                }
+                else if (email.charAt(i)=='.')
+                {
+                    cptpoint++;
+                }
+            }
+            if(cptad==1 && cptpoint>=1){}
+            else
+            {
+                alert("email saisie invalide ");
+                return false;
+            }
+        }
+
+  </script>
+
+
+<body>
+  <div class="container">
+    
+
+    <form method="POST" onSubmit="return verif()" action="page5.html">
+      Quel mod&egrave;le achetez-vous le plus souvent ?<br>
+
+      <input type="radio" name="modele" value="tesla" id="tesla">
+      <label for="chaussures"> tesla </label><br>
+      <input type="radio" name="modele" value="bmw" id="bmw">
+      <label for="T-shirt/Pulls"> bmw </label><br>
+      <input type="radio" name="modele" value="audi" id="audi">
+      <label for="jean"> audi </label><br>
+     
+
+      Combien de fois avez vous achetez chez nous ?<br>
+      <input type="radio" name="frequence" value="0 fois" id="0 fois">
+      <label for="0 fois"> 0 </label><br>
+      <input type="radio" name="frequence" value="1 fois" id="1 fois">
+      <label for="1 fois"> 1 </label><br>
+      <input type="radio" name="frequence" value="2 fois" id="2 fois">
+      <label for="2 fois"> 2 </label><br>
+      <input type="radio" name="frequence" value="3 fois" id="3 fois">
+      <label for="3 fois"> 3 </label><br><br>
+
+      Qualit&eacute; du SAV ?<br>
+      <input type="radio" name="qualite" value="très bien" id="très bien">
+      <label for="très bien"> Tr&egrave;s bien </label><br>
+      <input type="radio" name="qualité" value="bien" id="bien">
+      <label for="bien"> Bien </label><br>
+      <input type="radio" name="qualite" value="passable" id="passable">
+      <label for="passable"> Passable </label><br>
+      <input type="radio" name="qualite" value="mauvais" id="mauvais">
+      <label for="mauvais"> Mauvais </label><br><br>
+
+      <input type="submit" value = "Suivant" style="background-color: #FFBF00; border: 1px solid black;padding:8px">
+    </form>
+<h4>PIED-DE-PAGE</h4>
+
+</div> <!-- fin du container -->
+
+</body>
+</html>
