@@ -2,53 +2,110 @@
  <head> 
 <meta http-equiv="content-Type" content="text/html; charset=iso-8859-1"> 
 <link rel="stylesheet" type="text/css" href="index.css" />
-<script type="text/javascript" src="basiccalendar.js">
-</script>
 </head>
 
 <body>
-
 <h4>EN-TETE</h4>
 
 <div class="gauche">
-    <script type="text/javascript">
-          var todaydate=new Date()
-          var curmonth=todaydate.getMonth()+1 //get current month (1-12)
-          var curyear=todaydate.getFullYear() //get current year
-
-          document.write(buildCal(curmonth ,curyear, "main", "month", "daysofweek", "days", 1));
-    </script>
+    <div>
+        <a target="_blank"><img border="0" src="http://www.calendian.com/gen/fr.png" alt="Calendrier - Français, Calendian"></a>
+    </div>
+    
+    <div>
+    <!-- weather widget start --><a target="_blank" href="https://hotelmix.fr/weather/paris-18145">
+        <img src="https://w.bookcdn.com/weather/picture/31_18145_1_3_c55a99_250_bf428c_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=581&anc_id=54502" alt="booked.net"/></a><!-- weather widget end -->
+    </div>
+        
 </div>
 
 <div class="droite"> <!-- Dans certains cas, mettre la colonne droite avant la centre passe mieux -->
+    <a href="https://www.norauto.fr/"><img src="norauto.gif" alt= "norauto"></a>
 </div>
 
 <div class="centre">
     <script>
         function verif(){
 
-            var email=document.getElementById("email").value;
-            var cptad=0;
-            var cptpoint=0;
-
-            for (var i=0; i<email.length; i++)
-            {
-                if (email.charAt(i)=='@')
+            var checkbox1 = document.getElementById("prix").checked;
+            var checkbox2 = document.getElementById("confort").checked;
+            var checkbox3 = document.getElementById("style").checked;
+            var checkbox4 = document.getElementById("resistance").checked;
+            var checkbox5 = document.getElementById("autre").checked;
+            
+            var checkbox6 = document.getElementById("mail").checked;
+            var checkbox7 = document.getElementById("web").checked;
+            var checkbox8 = document.getElementById("ami").checked;
+            var checkbox9 = document.getElementById("autre").checked;
+            
+            var count = 0;
+            //var checkbox1 = document.getElementByName("Premier critère");
+            if(checkbox1 == true)
                 {
-                    cptad++;
-
+                    count++;    
                 }
-                else if (email.charAt(i)=='.')
+            if(checkbox2 == true)
                 {
-                    cptpoint++;
+                    count++;    
                 }
-            }
-            if(cptad==1 && cptpoint>=1){}
+            if(checkbox3 == true)
+                {
+                    count++;    
+                }
+            if(checkbox4 == true)
+                {
+                    count++;    
+                }
+            if(checkbox5 == true)
+                {
+                    count++;    
+                }
+            
+            //var checkbox1 = document.getElementByName("Premier critère");
+            if(checkbox6 == true)
+                {
+                    count++;    
+                }
+            if(checkbox7 == true)
+                {
+                    count++;    
+                }
+            if(checkbox8 == true)
+                {
+                    count++;    
+                }
+            if(checkbox9 == true)
+                {
+                    count++;    
+                }
+            if(count >= 2)
+                {
+                    return true;
+                }
             else
+                {
+                    alert("Veuillez cocher au moins une case dans chaque question");
+                    return false;
+                }
+            
+            /*if(checkbox1 != true && checkbox2 != true && checkbox3 != true && checkbox4 != true)
             {
-                alert("email saisie invalide ");
+                alert("Veuillez cocher au moins une case dans chaque question");
                 return false;
             }
+            else
+                return true;*/
+            
+            
+/*            if(checkbox5 != true && checkbox6 != true && checkbox7 != true && checkbox8 != true && checkbox9 != true)
+            {
+                alert("Veuillez cocher au moins une case dans chaque question");
+                return false;
+            }
+            else
+            {
+                return true;
+            }*/
         }
 
     </script>
@@ -57,35 +114,46 @@
     <center>
     <form method="POST" onSubmit="return verif()" action="page4.html">
             <br>
+        
                 Quels sont vos crit&egrave;res essentiels &agrave; l'achat d'un de nos mod&egrave;les ?<br>
-                <input type="checkbox" name="Premier critère" value="prix" id="prix">
+                <input type="checkbox" name="Premier critère" value="prix" id="prix"/>
                 <label for="prix"> Prix du mod&egrave;les </label><br>
-                <input type="checkbox" name="Premier critère" value="confort" id="confort">
+        
+                <input type="checkbox" name="Premier critère" value="confort" id="confort"/>
                 <label for="confort"> Confort du mod&egrave;les </label><br>
-                <input type="checkbox" name="Premier critère" value="style" id="style">
+        
+                <input type="checkbox" name="Premier critère" value="style" id="style"/>
                 <label for="style"> Style du mod&egrave;les </label><br>
-                <input type="checkbox" name="Premier critère" value="resistance" id="resistance">
+        
+                <input type="checkbox" name="Premier critère" value="resistance" id="resistance"/>
                 <label for="resistance"> R&eacute;sistance du mod&egrave;les </label><br>
-                <input type="checkbox" name="Premier critère" value="autre" id="autre">
+        
+                <input type="checkbox" name="Premier critère" value="autre" id="autre"/>
                 <label for="autre"> Autre </label>
+        
             <br><br><br>
-
-
+        
                 Comment nous avez-vous d&eacute;couvert  ?<br>
-                <input type="checkbox" name="concours" value="mail" id="mail">
+                <input type="checkbox" name="concours" value="mail" id="mail"/>
                 <label for="mail"> Par e-mail </label><br>
-                <input type="checkbox" name="concours" value="web" id="web">
+        
+                <input type="checkbox" name="concours" value="web" id="web"/>
                 <label for="web"> Par un r&eacute;seau social </label><br>
-                <input type="checkbox" name="ami" value="ami" id="ami">
+        
+                <input type="checkbox" name="ami" value="ami" id="ami"/>
                 <label for="ami"> Par un ami </label><br>
-                <input type="checkbox" name="concours" value="autre" id="autre">
+        
+                <input type="checkbox" name="concours" value="autre" id="autre"/> 
                 <label for="autre"> Autre </label><br><br>
 
             <br><br>
             <input type="submit" value = "Suivant" >
     </form>
     </center>
-</div><!-- fin du container -->
-<h4>PIED-DE-PAGE</h4>
+    </div>
+    </div>
+    <h4>PIED-DE-PAGE</h4>
+
+ 
 </body>
 </html>

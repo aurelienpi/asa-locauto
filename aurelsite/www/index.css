@@ -23,7 +23,7 @@ h4 { /* style des en-tête et en-pied */
    border-left: 3px solid black; /* bordure gauche */
    border-right: 3px solid black; /* bordure droite */
   padding: 10px; /* marge intérieure - indispensable */
-  background-color: #CCCCCC} /* couleur du fond */
+    background-color: #CCCCCC} /* couleur du fond */ 
 
 .droite { /* boite droite (avec le commentaire) */
   position: absolute; /* positionné par rapport à la boite parent (ici .container) */
